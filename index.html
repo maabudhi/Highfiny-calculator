@@ -1,0 +1,1393 @@
+<!doctype html>
+<html lang="en"> 
+ <head> <!-- Primary Meta Tags --> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Highfiny - Advanced Financial Calculators for Smart Investors</title> 
+  <meta name="description" content="Free advanced financial calculators including SIP, Lumpsum, FD and EMI calculators. Plan your investments and loans with precision."> 
+  <meta name="keywords" content="financial calculator, SIP calculator, lumpsum calculator, FD calculator, EMI calculator, investment calculator, mutual fund calculator, loan calculator"> 
+  <meta name="author" content="Highfiny"> 
+  <meta name="robots" content="index, follow"> <!-- Open Graph / Facebook --> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="https://highfiny.com/"> 
+  <meta property="og:title" content="Highfiny - Advanced Financial Calculators for Smart Investors"> 
+  <meta property="og:description" content="Free advanced financial calculators including SIP, Lumpsum, FD and EMI calculators. Plan your investments and loans with precision."> 
+  <meta property="og:image" content="https://highfiny.com/images/highfiny-social-share.jpg"> <!-- Twitter --> 
+  <meta property="twitter:card" content="summary_large_image"> 
+  <meta property="twitter:url" content="https://highfiny.com/"> 
+  <meta property="twitter:title" content="Highfiny - Advanced Financial Calculators for Smart Investors"> 
+  <meta property="twitter:description" content="Free advanced financial calculators including SIP, Lumpsum, FD and EMI calculators. Plan your investments and loans with precision."> 
+  <meta property="twitter:image" content="https://highfiny.com/images/highfiny-social-share.jpg"> <!-- Canonical URL --> 
+  <link rel="canonical" href="https://highfiny.com/"> <!-- Favicon --> 
+  <link rel="icon" type="image/png" href="https://highfiny.com/favicon.png"> 
+  <link rel="apple-touch-icon" href="https://highfiny.com/apple-touch-icon.png"> <!-- Preconnect to external resources --> 
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Font Awesome --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Google Fonts --> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> <!-- Structured Data --> 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Highfiny",
+      "url": "https://highfiny.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://highfiny.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script> 
+  <style>
+        :root {
+            --primary-color: #4a6bff;
+            --primary-dark: #3a56d4;
+            --primary-light: #e8f0fe;
+            --secondary-color: #6c8eff;
+            --accent-color: #4cc9f0;
+            --text-color: #2b2d42;
+            --text-light: #6c757d;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #adb5bd;
+            --border-color: #dee2e6;
+            --white: #ffffff;
+            --black: #212529;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --header-gradient: linear-gradient(135deg, #3a56d4 0%, #4a6bff 100%);
+            --menu-bg: #2b3a8c;
+            --royal-blue: #4169e1;
+            --light-royal-blue: #6c8eff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" preserveAspectRatio="none"><defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%233a56d4" stop-opacity="0.08"/><stop offset="100%" stop-color="%234a6bff" stop-opacity="0.08"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23gradient)"/><path d="M0,450 C150,600 300,300 450,450 C600,600 750,300 900,450 C1050,600 1200,300 1350,450 L1440,450 L1440,900 L0,900 Z" fill="%234a6bff" fill-opacity="0.03"/><path d="M0,600 C150,450 300,750 450,600 C600,450 750,750 900,600 C1050,450 1200,750 1350,600 L1440,600 L1440,900 L0,900 Z" fill="%233a56d4" fill-opacity="0.03"/></svg>');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            background: var(--header-gradient);
+            padding: 10px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-container::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .logo-link {
+            display: inline-block;
+            line-height: 0;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .brand-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            transition: opacity 0.2s;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .brand-name:hover {
+            opacity: 0.9;
+        }
+
+        /* Menu Button Styles */
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-btn span {
+            height: 3px;
+            width: 30px;
+            background-color: var(--white);
+            border-radius: 20px;
+            transition: var(--transition);
+            transform-origin: center;
+            position: absolute;
+            left: 6px;
+        }
+
+        .menu-btn span:nth-child(1) {
+            top: 8px;
+            transform: translateY(0) rotate(0);
+        }
+
+        .menu-btn span:nth-child(2) {
+            top: 16px;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .menu-btn span:nth-child(3) {
+            top: 24px;
+            transform: translateY(0) rotate(0);
+        }
+
+        /* Transform to X when active */
+        .menu-btn.active span:nth-child(1) {
+            top: 16px;
+            transform: translateY(0) rotate(45deg);
+        }
+
+        .menu-btn.active span:nth-child(2) {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .menu-btn.active span:nth-child(3) {
+            top: 16px;
+            transform: translateY(0) rotate(-45deg);
+        }
+
+        /* Menu Styles */
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 320px;
+            height: 100vh;
+            background: var(--header-gradient);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: right 0.4s ease;
+            padding-top: 70px;
+            overflow-y: auto;
+        }
+
+        .menu.active {
+            right: 0;
+        }
+
+        .menu-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 320px;
+            background: var(--header-gradient);
+            z-index: 1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-title {
+            font-weight: 600;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            margin-left: 10px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 3.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 5px;
+            line-height: 1;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            opacity: 1;
+            visibility: visible;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .menu.active .close-btn {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 20px;
+            margin-top: 0;
+        }
+
+        .menu li {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .menu a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: block;
+            padding: 12px 15px;
+            font-weight: 500;
+            border-radius: var(--radius-md);
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu a::before {
+            content: '';
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: var(--transition);
+        }
+
+        .menu a:hover {
+            color: var(--white);
+            background: rgba(255, 255, 255, 0.1);
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+        .menu a:hover::before {
+            left: 100%;
+        }
+
+        .menu a i {
+            width: 22px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            background: var(--royal-blue);
+            color: var(--white);
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, var(--light-gray), transparent);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 6rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--white);
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            line-height: 1;
+            letter-spacing: -2px;
+            background: linear-gradient(to right, #fff 0%, #e0e0e0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            100% {
+                text-shadow: 0 5px 25px rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.4;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            min-width: 160px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--white);
+            color: var(--royal-blue);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transform-style: preserve-3d;
+            transform: perspective(500px);
+        }
+
+        .btn-primary:hover {
+            transform: perspective(500px) translateY(-3px) rotateX(8deg);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, var(--white) 0%, #f0f0f0 100%);
+            z-index: -1;
+            transition: all 0.3s ease;
+            opacity: 1;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 0.9;
+            transform: scale(1.03);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            width: 165px;
+            min-width: auto;
+            border: 4px solid rgba(255, 255, 255, .4);
+            backdrop-filter: blur(5px);
+            transform-style: preserve-3d;
+            transform: perspective(500px);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: perspective(500px) translateY(-3px) rotateX(8deg);
+            border-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn i {
+            margin-right: 7px;
+            font-size: 0.9rem;
+        }
+
+        /* New HF Portrait Background */
+        .hf-portrait {
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hf-portrait svg {
+            width: 80%;
+            height: 80%;
+            max-width: 800px;
+        }
+
+        .hf-letter {
+            fill: none;
+            stroke-width: 56;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: draw 8s ease-out forwards;
+        }
+
+        .hf-letter-left {
+            stroke: var(--royal-blue);
+        }
+
+        .hf-letter-right {
+            stroke: var(--light-royal-blue);
+        }
+
+        .hf-shadow {
+            fill: none;
+            stroke-width: 15;
+            stroke-opacity: 0.1;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            animation: pulseShadow 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes pulseShadow {
+            0% {
+                stroke-opacity: 0.08;
+                transform: translate(-5px, -5px);
+            }
+            50% {
+                stroke-opacity: 0.15;
+                transform: translate(5px, 5px);
+            }
+            100% {
+                stroke-opacity: 0.08;
+                transform: translate(-5px, -5px);
+            }
+        }
+
+        /* Floating bubbles */
+        .floating-bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            animation: floatBubble 15s infinite linear;
+        }
+
+        @keyframes floatBubble {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-100px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 150px 0 80px;
+                min-height: auto;
+            }
+            
+            .hero-title {
+                font-size: 3.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: row;
+                gap: 12px;
+            }
+            
+            .btn {
+                padding: 8px 14px;
+                font-size: 0.8rem;
+                min-width: 140px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 130px 0 60px;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 1.8rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: row;
+                gap: 10px;
+            }
+            
+            .btn {
+                padding: 7px 12px;
+                font-size: 0.75rem;
+                min-width: 130px;
+            }
+        }
+
+        /* Modern Calculator Grid Section */
+        .calculators-section {
+            padding: 25px 0 25px;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .calculator-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(74, 107, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            flex-direction: column;
+            border: none;
+            z-index: 1;
+            isolation: isolate;
+        }
+
+        .calculator-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 107, 255, 0.1) 0%, rgba(74, 107, 255, 0) 100%);
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+
+        .calculator-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(74, 107, 255, 0.2);
+        }
+
+        .calculator-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-link {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-icon-bg {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(74, 107, 255, 0.1) 0%, rgba(74, 107, 255, 0.05) 100%);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+
+        .calculator-card:hover .card-icon-bg {
+            transform: scale(1.5);
+            opacity: 0.8;
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--white);
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .calculator-card:hover .card-icon {
+            transform: translateY(-5px);
+        }
+
+        .card-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .card-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .calculator-card:hover .card-content h3::after {
+            width: 50px;
+            background: var(--primary-dark);
+        }
+
+        /* Calculator-specific styling */
+        .calculator-card:nth-child(1) {
+            --card-color: var(--primary-color);
+        }
+
+        .calculator-card:nth-child(2) {
+            --card-color: var(--royal-blue);
+        }
+
+        .calculator-card:nth-child(3) {
+            --card-color: var(--primary-dark);
+        }
+
+        .calculator-card:nth-child(4) {
+            --card-color: var(--royal-blue);
+        }
+
+        .calculator-card:nth-child(1) .card-icon {
+            background: linear-gradient(135deg, var(--primary-color), #5a7bff);
+            box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+        }
+
+        .calculator-card:nth-child(2) .card-icon {
+            background: linear-gradient(135deg, var(--royal-blue), #5a7bff);
+            box-shadow: 0 5px 15px rgba(65, 105, 225, 0.3);
+        }
+
+        .calculator-card:nth-child(3) .card-icon {
+            background: linear-gradient(135deg, var(--primary-dark), #4a64d6);
+            box-shadow: 0 5px 15px rgba(58, 86, 212, 0.3);
+        }
+
+        .calculator-card:nth-child(4) .card-icon {
+            background: linear-gradient(135deg, var(--royal-blue), #5a7bff);
+            box-shadow: 0 5px 15px rgba(65, 105, 225, 0.3);
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: var(--royal-blue);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .features-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, var(--light-gray), transparent);
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--white);
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .feature-content h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .feature-content p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Features bubbles */
+        .features-bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--header-gradient);
+            padding: 60px 0 20px;
+            color: var(--white);
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--header-gradient);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--white);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .footer-col ul li a i {
+            width: 16px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+    </style> 
+ </head> 
+ <body> <!-- Header --> 
+  <header class="header"> 
+   <div class="header-container"> 
+    <div class="header-top"> 
+     <div class="brand-container" id="brandContainer"> 
+      <div class="logo-link"> <iframe loading="lazy" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2);" src="https://www.canva.com/design/DAGvrqZI39c/mniix39A4NxDJfrQSCYOzQ/view?embed&amp;mode=present"></iframe> 
+      </div> 
+      <div class="brand-name">
+        Highfiny 
+      </div> 
+     </div> 
+     <div class="menu-container"> 
+      <div class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu"> <span></span> <span></span> <span></span> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="menu" id="mainMenu"> 
+    <div class="menu-header"> 
+     <div class="menu-title">
+       Menu 
+     </div> <button class="close-btn" id="closeMenuBtn" aria-label="Close menu">×</button> 
+    </div> 
+    <ul> 
+     <li><a href="/index.html" aria-label="Home"><i class="fas fa-home"></i> Home</a></li> 
+     <li><a href="/sip-calculator.html" aria-label="SIP Calculator"><i class="fas fa-chart-line"></i> SIP Calculator</a></li> 
+     <li><a href="/lumpsum-calculator.html" aria-label="Lumpsum Calculator"><i class="fas fa-money-bill-wave"></i> Lumpsum Calculator</a></li> 
+     <li><a href="/emi-calculator.html" aria-label="EMI Calculator"><i class="fas fa-calculator"></i> EMI Calculator</a></li> 
+     <li><a href="/fd-calculator.html" aria-label="FD Calculator"><i class="fas fa-piggy-bank"></i> FD Calculator</a></li> 
+     <li><a href="/about.html" aria-label="About Us"><i class="fas fa-info-circle"></i> About Us</a></li> 
+     <li><a href="/privacy.html" aria-label="Privacy Policy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li> 
+     <li><a href="/contact.html" aria-label="Contact"><i class="fas fa-envelope"></i> Contact</a></li> 
+     <li><a href="/disclaimer.html" aria-label="Disclaimer"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a></li> 
+    </ul> 
+   </div> 
+   <div class="overlay" id="overlay"></div> 
+  </header> <!-- Enhanced Hero Section --> 
+  <section class="hero"> <!-- HF Portrait Background --> 
+   <div class="hf-portrait"> 
+    <svg viewbox="0 0 800 800" preserveaspectratio="xMidYMid meet" aria-hidden="true"> <!-- H Letter --> <path class="hf-shadow" d="M150,150 L150,650 M150,400 L450,400 M450,150 L450,650" /> <path class="hf-letter hf-letter-left" d="M150,150 L150,650 M150,400 L225,400" /> <path class="hf-letter hf-letter-right" d="M225,400 L450,400 M450,150 L450,650" /> <!-- F Letter --> <path class="hf-shadow" d="M550,150 L550,650 M550,150 L850,150 M550,400 L750,400" transform="translate(-100,0)" /> <path class="hf-letter hf-letter-left" d="M550,150 L550,650 M550,150 L625,150" transform="translate(-100,0)" /> <path class="hf-letter hf-letter-right" d="M625,150 L850,150 M550,400 L750,400" transform="translate(-100,0)" /> 
+    </svg> 
+   </div> <!-- Floating bubbles --> 
+   <div class="floating-bubbles" id="bubblesContainer"></div> 
+   <div class="hero-content"> 
+    <h1 class="hero-title">HIGHFINY</h1> 
+    <p class="hero-subtitle">YOUR SMART FINANCIAL COMPANION</p> 
+    <div class="cta-buttons"> <a href="#calculators" class="btn btn-primary" aria-label="Explore our financial calculators"><i class="fas fa-calculator"></i> Explore Calculators</a> <a href="#features" class="btn btn-secondary" aria-label="Learn more about Highfiny"><i class="fas fa-info-circle"></i> Learn More</a> 
+    </div> 
+   </div> 
+  </section> <!-- Calculators Section --> 
+  <section class="calculators-section" id="calculators"> 
+   <div class="container"> 
+    <div class="calculator-grid"> <!-- SIP Calculator --> 
+     <div class="calculator-card floating"> <a href="/sip-calculator.html" class="card-link" aria-label="SIP Calculator"> 
+       <div class="card-icon-bg"></div> 
+       <div class="card-icon"> <i class="fas fa-chart-line" aria-hidden="true"></i> 
+       </div> 
+       <div class="card-content"> 
+        <h3>SIP Calculator</h3> 
+       </div> </a> 
+     </div> <!-- Lumpsum Calculator --> 
+     <div class="calculator-card floating delay-1"> <a href="/lumpsum-calculator.html" class="card-link" aria-label="Lumpsum Calculator"> 
+       <div class="card-icon-bg"></div> 
+       <div class="card-icon"> <i class="fas fa-coins" aria-hidden="true"></i> 
+       </div> 
+       <div class="card-content"> 
+        <h3>Lumpsum Calculator</h3> 
+       </div> </a> 
+     </div> <!-- FD Calculator --> 
+     <div class="calculator-card floating delay-2"> <a href="/fd-calculator.html" class="card-link" aria-label="FD Calculator"> 
+       <div class="card-icon-bg"></div> 
+       <div class="card-icon"> <i class="fas fa-piggy-bank" aria-hidden="true"></i> 
+       </div> 
+       <div class="card-content"> 
+        <h3>FD Calculator</h3> 
+       </div> </a> 
+     </div> <!-- EMI Calculator --> 
+     <div class="calculator-card floating"> <a href="/emi-calculator.html" class="card-link" aria-label="EMI Calculator"> 
+       <div class="card-icon-bg"></div> 
+       <div class="card-icon"> <i class="fas fa-calculator" aria-hidden="true"></i> 
+       </div> 
+       <div class="card-content"> 
+        <h3>EMI Calculator</h3> 
+       </div> </a> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- Features Section --> 
+  <section class="features-section" id="features"> <!-- Features bubbles --> 
+   <div class="features-bubbles" id="featuresBubblesContainer"></div> 
+   <div class="container"> 
+    <div class="section-title"> 
+     <h2>Why Choose Highfiny?</h2> 
+     <p>Our calculators are designed to provide accurate results with a user-friendly experience</p> 
+    </div> 
+    <div class="features-container"> 
+     <div class="feature-card"> 
+      <div class="feature-icon"> <i class="fas fa-bolt" aria-hidden="true"></i> 
+      </div> 
+      <div class="feature-content"> 
+       <h3>Lightning Fast</h3> 
+       <p>Get instant results without any delays. Our calculators process complex financial formulas in milliseconds.</p> 
+      </div> 
+     </div> 
+     <div class="feature-card"> 
+      <div class="feature-icon"> <i class="fas fa-mobile-alt" aria-hidden="true"></i> 
+      </div> 
+      <div class="feature-content"> 
+       <h3>Mobile Friendly</h3> 
+       <p>Access all calculators on any device - desktop, tablet, or mobile with responsive design.</p> 
+      </div> 
+     </div> 
+     <div class="feature-card"> 
+      <div class="feature-icon"> <i class="fas fa-chart-pie" aria-hidden="true"></i> 
+      </div> 
+      <div class="feature-content"> 
+       <h3>Comprehensive Analysis</h3> 
+       <p>Get detailed breakdowns and visual representations of your financial calculations with pie charts.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- CTA Section --> 
+  <section class="cta-section"> 
+   <div class="cta-container"> 
+    <h2>Ready to Take Control of Your Finances?</h2> 
+    <p>Start using Highfiny's financial calculators today and make informed decisions about your money.</p> <a href="#calculators" class="btn btn-primary" aria-label="Get started with Highfiny calculators">Get Started for Free</a> 
+   </div> 
+  </section> <!-- Footer --> 
+  <footer class="footer"> 
+   <div class="container"> 
+    <div class="footer-grid"> 
+     <div class="footer-col"> 
+      <h4>Calculators</h4> 
+      <ul> 
+       <li><a href="/sip-calculator.html" aria-label="SIP Calculator"><i class="fas fa-angle-right" aria-hidden="true"></i> SIP Calculator</a></li> 
+       <li><a href="/lumpsum-calculator.html" aria-label="Lumpsum Calculator"><i class="fas fa-angle-right" aria-hidden="true"></i> Lumpsum Calculator</a></li> 
+       <li><a href="/emi-calculator.html" aria-label="EMI Calculator"><i class="fas fa-angle-right" aria-hidden="true"></i> EMI Calculator</a></li> 
+       <li><a href="/fd-calculator.html" aria-label="FD Calculator"><i class="fas fa-angle-right" aria-hidden="true"></i> FD Calculator</a></li> 
+      </ul> 
+     </div> 
+     <div class="footer-col"> 
+      <h4>Company</h4> 
+      <ul> 
+       <li><a href="/about.html" aria-label="About Highfiny"><i class="fas fa-angle-right" aria-hidden="true"></i> About Us</a></li> 
+       <li><a href="/contact.html" aria-label="Contact Highfiny"><i class="fas fa-angle-right" aria-hidden="true"></i> Contact</a></li> 
+       <li><a href="/privacy.html" aria-label="Privacy Policy"><i class="fas fa-angle-right" aria-hidden="true"></i> Privacy Policy</a></li> 
+       <li><a href="/disclaimer.html" aria-label="Disclaimer"><i class="fas fa-angle-right" aria-hidden="true"></i> Disclaimer</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="footer-bottom"> 
+     <p>© <span id="currentYear"></span> Highfiny. All rights reserved.</p> 
+    </div> 
+   </div> 
+  </footer> 
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const elements = {
+                menuBtn: document.getElementById('menuBtn'),
+                mainMenu: document.getElementById('mainMenu'),
+                closeMenuBtn: document.getElementById('closeMenuBtn'),
+                overlay: document.getElementById('overlay'),
+                body: document.body,
+                currentYear: document.getElementById('currentYear'),
+                bubblesContainer: document.getElementById('bubblesContainer'),
+                featuresBubblesContainer: document.getElementById('featuresBubblesContainer'),
+                brandContainer: document.getElementById('brandContainer')
+            };
+
+            // Create floating bubbles
+            function createBubbles(container, count) {
+                for (let i = 0; i < count; i++) {
+                    const bubble = document.createElement('div');
+                    bubble.classList.add('bubble');
+                    
+                    // Random size between 100px and 250px (same as hero section)
+                    const size = Math.random() * 150 + 100;
+                    bubble.style.width = `${size}px`;
+                    bubble.style.height = `${size}px`;
+                    
+                    // Random position
+                    bubble.style.left = `${Math.random() * 100}%`;
+                    bubble.style.top = `${Math.random() * 100}%`;
+                    
+                    // Random opacity
+                    bubble.style.opacity = Math.random() * 0.2 + 0.1;
+                    
+                    // Random animation duration and delay
+                    const duration = Math.random() * 30 + 20;
+                    const delay = Math.random() * 15;
+                    bubble.style.animationDuration = `${duration}s`;
+                    bubble.style.animationDelay = `${delay}s`;
+                    
+                    container.appendChild(bubble);
+                }
+            }
+
+            // Toggle menu function
+            function toggleMenu() {
+                elements.mainMenu.classList.toggle('active');
+                elements.overlay.classList.toggle('active');
+                elements.menuBtn.classList.toggle('active');
+                elements.body.classList.toggle('menu-open');
+            }
+
+            // Initialize the page
+            function init() {
+                // Set current year in footer
+                elements.currentYear.textContent = new Date().getFullYear();
+                
+                // Create bubbles for hero section
+                createBubbles(elements.bubblesContainer, 15);
+                
+                // Create bubbles for features section (same count and size)
+                createBubbles(elements.featuresBubblesContainer, 15);
+                
+                // Menu event listeners
+                elements.menuBtn.addEventListener('click', toggleMenu);
+                elements.closeMenuBtn.addEventListener('click', toggleMenu);
+                elements.overlay.addEventListener('click', toggleMenu);
+                
+                // Brand container click handler
+                elements.brandContainer.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (elements.mainMenu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+                
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+                        
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Close mobile menu if open
+                            if (elements.mainMenu.classList.contains('active')) {
+                                toggleMenu();
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Start the page
+            init();
+        });
+    </script> 
+ </body>
+</html>
